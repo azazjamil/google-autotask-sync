@@ -53,11 +53,11 @@ export default function OAuth2Callback() {
 
     // Function to handle user signup (same as before)
     const signupUser = async (
-      refreshToken,
-      clientId,
-      clientSecret,
+      refresh_token,
+      client_id,
+      client_secret,
       email,
-      resourceId
+      resource_id
     ) => {
       const signupResponse = await fetch("http://localhost:3000/user/create", {
         method: "POST",
@@ -66,10 +66,10 @@ export default function OAuth2Callback() {
         },
         body: JSON.stringify({
           email,
-          clientId,
-          clientSecret,
-          resourceId,
-          refreshToken,
+          client_id,
+          client_secret,
+          resource_id,
+          refresh_token,
         }),
       });
 
